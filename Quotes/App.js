@@ -9,6 +9,7 @@ import {
   View,
   Dimensions
 } from 'react-native';
+import Quote from './components/Quote';
 
 import { deviceHeight, deviceWidth, colors } from "./config";
 
@@ -20,8 +21,7 @@ const App = () => {
   return (
     <View style={styles.sectionContainer}>
       <Text style={styles.title}>Quote</Text>
-      <Text style={styles.quote}>"Take things as they are. Punch when you have to punch. Kick when you have to kick." </Text>
-      <Text style={styles.author}>  - Bruce Lee </Text>
+      <Quote author="unknown" quoteText="Text is here"></Quote>
     </View>
   );
 };
@@ -38,21 +38,6 @@ const styles = StyleSheet.create({
     fontSize: 30,
     marginTop: 10
   },
-  quote: {
-    fontSize: 24,
-    marginHorizontal: 20,
-    marginTop: '35%',
-    fontStyle: 'italic',
-    color: colors.lightgrey
-  },
-  author: {
-    fontSize: 16,
-    marginTop: 10,
-    color: colors.lightgrey,
-    textAlign: 'right',
-    width: deviceWidth,
-    paddingRight: 20,
-  }
 });
 
 export default App;
