@@ -7,7 +7,11 @@ import {
   Text,
   useColorScheme,
   View,
+  Dimensions
 } from 'react-native';
+
+import { deviceHeight, deviceWidth } from "./config";
+
 
 
 const App = () => {
@@ -15,8 +19,10 @@ const App = () => {
 
   return (
     <ScrollView>
-      <View>
+      <View style={styles.sectionContainer}>
         <Text> Quotes </Text>
+        <Text style={styles.quote}>"Take things as they are. Punch when you have to punch. Kick when you have to kick." </Text>
+        <Text style={styles.author}>  - Kahlil Gibran </Text>
       </View>
     </ScrollView>
   );
@@ -24,21 +30,22 @@ const App = () => {
 
 const styles = StyleSheet.create({
   sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
+    flex: 1,
+    alignItems: 'center',
   },
-  sectionTitle: {
+  quote: {
     fontSize: 24,
-    fontWeight: '600',
+    marginHorizontal: 20,
+    marginTop: '40%'
   },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
+  author: {
+    fontSize: 16,
+    marginTop: 10,
+    color: 'red',
+    textAlign: 'right',
+    width: deviceWidth,
+    paddingRight: 20,
+  }
 });
 
 export default App;
