@@ -6,3 +6,4 @@ export const colors = {
     indigo: '#093145',
     lightgrey: 'lightgrey'
 }
+export const quoteURL = 'https://api.quotable.io/random'
